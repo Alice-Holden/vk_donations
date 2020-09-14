@@ -1,0 +1,847 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea, button {
+  outline: none;
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+/*variables*/
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .donations {
+    display: block;
+    padding: 19px 0 0 0;
+    text-align: center;
+  }
+
+  .blockDonations {
+    margin: 0 auto;
+    width: 171px;
+    margin-top: 259px;
+  }
+
+  .blockDonations-button {
+    text-align: center;
+    margin-top: 36px;
+  }
+  .blockDonations-button a {
+    text-decoration: none;
+    background: #3e81cf;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 9px;
+    border: 1px solid #3e81cf;
+  }
+  .blockDonations-button a:hover {
+    background: white;
+    color: #3e81cf;
+  }
+
+  .chooseTheTypeOfDonation {
+    margin-top: 229px;
+  }
+
+  .chooseTheTypeOfDonation_button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .chooseTheTypeOfDonation_button a {
+    background: #f5f5f5;
+    color: black;
+    display: block;
+    width: 83%;
+    margin: 0 5%;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+  .chooseTheTypeOfDonation_button a h2 {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .chooseTheTypeOfDonation_button a p {
+    padding-top: 5px;
+    font-size: 12px;
+    letter-spacing: .7px;
+  }
+
+  .calendar {
+    width: 21px;
+    padding-right: 10px;
+    float: left;
+  }
+
+  .target {
+    width: 24px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .arrow {
+    width: 10px;
+    float: right;
+    margin-top: -26px;
+    margin-right: 20px;
+  }
+
+  .rightBlue {
+    width: 10px;
+    float: left;
+    left: 15px;
+    margin-top: 5px;
+    position: absolute;
+  }
+
+  .uploadPicture {
+    width: 330px;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px dashed #3e81cf;
+  }
+  .uploadPicture a {
+    display: block;
+    width: 170px;
+    padding: 60px 10px;
+    margin: 0 auto;
+  }
+  .uploadPicture img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+  }
+  .uploadPicture h2 {
+    margin-top: 3px;
+    color: #3e81cf;
+  }
+
+  .descriptionOfDonation {
+    letter-spacing: .7px;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+  .descriptionOfDonation form {
+    width: 330px;
+    margin: 0 auto;
+  }
+  .descriptionOfDonation label {
+    color: gray;
+    font-size: 14px;
+  }
+  .descriptionOfDonation .donationInput {
+    margin-top: 10px;
+    width: 320px;
+    font-size: 14px;
+    padding-left: 10px;
+    height: 40px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    color: gray;
+  }
+
+  .submit {
+    background: #3e81cf;
+    color: white;
+    width: 334px;
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    padding: 22px 0 22px 0;
+    border: 1px solid #3e81cf;
+  }
+
+  .loadPicture {
+    width: 330px;
+    margin: 40px auto;
+    border-radius: 20px;
+    height: 141px;
+    overflow: hidden;
+    border: 1px dashed #3e81cf;
+  }
+  .loadPicture img {
+    width: 332px;
+  }
+
+  .formName {
+    color: gray;
+    letter-spacing: .7px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+  .formName select {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f5f5f5;
+  }
+
+  .endOfDonation {
+    letter-spacing: .7px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .endOfDonation p {
+    color: gray;
+  }
+  .endOfDonation input {
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .endOfDonation label {
+    width: 500px;
+    display: block;
+  }
+
+  .calendarData {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .calendarData p {
+    color: gray;
+  }
+  .calendarData input {
+    display: block;
+    padding: 10px 50px;
+    color: gray;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #f5f5f5;
+    text-align: left;
+  }
+
+  .createAFee {
+    background: #3e81cf;
+    color: white;
+    width: 304px;
+    margin: 150px auto;
+    font-size: 14px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    padding: 22px 0 22px 0;
+    border: 1px solid #3e81cf;
+  }
+
+  .successful h1 {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 28px;
+  }
+
+  body .textcontainer {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  body .particletext {
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+  }
+
+  body .particletext.hearts > .particle {
+    opacity: 0;
+    position: absolute;
+    background-color: #cc2a5d;
+    -webkit-animation: hearts 3s ease-in infinite;
+    animation: hearts 3s ease-in infinite;
+  }
+
+  body .particletext.hearts > .particle:before, body .particletext.hearts > .particle:after {
+    position: absolute;
+    content: '';
+    border-radius: 100px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #cc2a5d;
+  }
+
+  body .particletext.hearts > .particle:before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  body .particletext.hearts > .particle:after {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @-webkit-keyframes hearts {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+    }
+    20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+    }
+  }
+  @keyframes hearts {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+    }
+    20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+    }
+  }
+  .textcontainer {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 577px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .donations {
+    display: block;
+    padding: 39px 0 5px 0;
+    text-align: center;
+  }
+
+  .blockDonations {
+    margin: 0 auto;
+    width: 322px;
+    line-height: 1.4;
+    margin-top: 259px;
+  }
+  .blockDonations p {
+    font-size: 32px;
+  }
+
+  .blockDonations-button {
+    text-align: center;
+    margin-top: 66px;
+  }
+  .blockDonations-button a {
+    text-decoration: none;
+    background: #3e81cf;
+    color: white;
+    font-size: 28px;
+    padding: 15px 25px;
+    border-radius: 9px;
+    border: 1px solid #3e81cf;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .blockDonations-button a:hover {
+    background: white;
+    color: #3e81cf;
+  }
+
+  .chooseTheTypeOfDonation {
+    margin-top: 229px;
+  }
+
+  .chooseTheTypeOfDonation_button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .chooseTheTypeOfDonation_button a {
+    background: #f5f5f5;
+    color: black;
+    display: block;
+    width: 83%;
+    margin: 0 7%;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+  .chooseTheTypeOfDonation_button a h2 {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .chooseTheTypeOfDonation_button a p {
+    padding-top: 5px;
+    font-size: 12px;
+    letter-spacing: .7px;
+  }
+
+  .calendar {
+    width: 21px;
+    padding-right: 10px;
+    float: left;
+  }
+
+  .target {
+    width: 24px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .arrow {
+    width: 10px;
+    float: right;
+    margin-top: -26px;
+    margin-right: 20px;
+  }
+
+  .rightBlue {
+    width: 10px;
+    float: left;
+    left: 15px;
+    margin-top: 5px;
+    position: absolute;
+  }
+
+  .uploadPicture {
+    width: 530px;
+    margin: 50px auto;
+    border-radius: 20px;
+    border: 1px dashed #3e81cf;
+  }
+  .uploadPicture a {
+    display: block;
+    width: 261px;
+    padding: 60px 10px;
+    margin: 0 auto;
+  }
+  .uploadPicture img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+  }
+  .uploadPicture h2 {
+    margin-top: 3px;
+    font-size: 24px;
+    color: #3e81cf;
+  }
+
+  .descriptionOfDonation {
+    letter-spacing: .7px;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+  .descriptionOfDonation form {
+    width: 530px;
+    margin: 0 auto;
+  }
+  .descriptionOfDonation label {
+    color: gray;
+    font-size: 20px;
+  }
+  .descriptionOfDonation .donationInput {
+    margin-top: 10px;
+    width: 500px;
+    font-size: 20px;
+    padding: 20px;
+    height: 40px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    color: gray;
+  }
+
+  .submit {
+    background: #3e81cf;
+    color: white;
+    width: 500px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 23px 20px;
+    height: 20px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    border: 1px solid #3e81cf;
+    -webkit-transition: .7s;
+    transition: .7s;
+  }
+  .submit:hover {
+    background: white;
+    color: #3e81cf;
+  }
+
+  .loadPicture {
+    width: 530px;
+    margin: 50px auto;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px dashed #3e81cf;
+    overflow: hidden;
+  }
+  .loadPicture img {
+    width: 532px;
+  }
+
+  .formName {
+    color: gray;
+    letter-spacing: .7px;
+    padding: 10px;
+    margin: 30px auto;
+  }
+  .formName select {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f5f5f5;
+  }
+
+  .endOfDonation {
+    letter-spacing: .7px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .endOfDonation p {
+    color: gray;
+  }
+  .endOfDonation input {
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .endOfDonation label {
+    width: 500px;
+    display: block;
+  }
+
+  .calendarData {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .calendarData p {
+    color: gray;
+  }
+  .calendarData input {
+    display: block;
+    padding: 10px 50px;
+    color: gray;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #f5f5f5;
+    text-align: left;
+  }
+
+  .successful h1 {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 28px;
+  }
+
+  body .textcontainer {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  body .particletext {
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+  }
+
+  body .particletext.hearts > .particle {
+    opacity: 0;
+    position: absolute;
+    background-color: #cc2a5d;
+    -webkit-animation: hearts 3s ease-in infinite;
+    animation: hearts 3s ease-in infinite;
+  }
+
+  body .particletext.hearts > .particle:before, body .particletext.hearts > .particle:after {
+    position: absolute;
+    content: '';
+    border-radius: 100px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #cc2a5d;
+  }
+
+  body .particletext.hearts > .particle:before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  body .particletext.hearts > .particle:after {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @-webkit-keyframes hearts {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+    }
+    20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+    }
+  }
+  @keyframes hearts {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+    }
+    20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+    }
+  }
+  .textcontainer {
+    margin-top: 300px;
+  }
+
+  .createAFee {
+    background: #3e81cf;
+    color: white;
+    width: 304px;
+    margin: 150px auto;
+    font-size: 14px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    padding: 22px 0 22px 0;
+    border: 1px solid #3e81cf;
+    -webkit-transition: .7s;
+    transition: .7s;
+  }
+  .createAFee:hover {
+    background: white;
+    color: #3e81cf;
+  }
+
+  .marginAuto {
+    margin: 100px auto;
+    width: 310px;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  .blockDonations {
+    width: 363px;
+    margin-top: 201px;
+  }
+  .blockDonations p {
+    font-size: 36px;
+  }
+
+  .blockDonations-button {
+    margin-top: 86px;
+  }
+  .blockDonations-button a {
+    font-size: 36px;
+    padding: 25px 55px;
+    border-radius: 10px;
+  }
+  .blockDonations-button a:hover {
+    background: white;
+    color: #3e81cf;
+  }
+
+  .uploadPicture {
+    margin: 100px auto;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .uploadPicture {
+    width: 430px;
+    margin: 100px 50px 100px 180px;
+    float: left;
+    border-radius: 20px;
+    border: 1px dashed #3e81cf;
+  }
+  .uploadPicture a {
+    display: block;
+    width: 261px;
+    padding: 100px 10px;
+    margin: 0 auto;
+  }
+  .uploadPicture img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+  }
+  .uploadPicture h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #3e81cf;
+  }
+
+  .blockDonations-title {
+    width: 442px;
+  }
+
+  .descriptionOfDonation {
+    float: left;
+    letter-spacing: .7px;
+    font-weight: 200;
+    margin: 100px 50px 50px 113px;
+  }
+  .descriptionOfDonation form {
+    width: 530px;
+    margin: 0 auto;
+  }
+  .descriptionOfDonation label {
+    color: gray;
+    font-size: 20px;
+  }
+  .descriptionOfDonation .donationInput {
+    margin-top: 20px;
+    width: 500px;
+    font-size: 20px;
+    padding: 20px;
+    height: 40px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    color: gray;
+  }
+
+  .submit {
+    background: #3e81cf;
+    color: white;
+    width: 500px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 23px 20px;
+    height: 20px;
+    letter-spacing: .7px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    border: 1px solid #3e81cf;
+  }
+
+  .rightBlue {
+    left: 515px;
+    width: 20px;
+  }
+
+  .loadPicture {
+    width: 430px;
+    margin: 100px 50px 100px 180px;
+    float: left;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px dashed #3e81cf;
+  }
+  .loadPicture img {
+    width: 450px;
+  }
+
+  .textcontainer {
+    margin-top: 200px;
+  }
+}

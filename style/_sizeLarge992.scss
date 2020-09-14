@@ -1,0 +1,30 @@
+@media screen and (min-width:992px){
+	h1{
+	  font-size: 38px;
+	}
+
+	.blockDonations{
+    	width: 363px;
+    	margin-top: 201px;
+    	p{
+    		font-size: 36px; 
+    	}
+	}
+	.blockDonations-button{
+		margin-top: 86px;
+		a{
+		    font-size: 36px;
+		    padding: 25px 55px;
+		    border-radius: 10px;
+
+    		&:hover{
+				 background: white ;
+		    	color: $backgroundBlue;
+    		}
+		}
+	}
+	.uploadPicture{
+		margin: 100px auto;
+	}
+	
+}
